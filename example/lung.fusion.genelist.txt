@@ -1,0 +1,35 @@
+##
+## A gene list example. For final output, see files:
+##   'lung.fusion.GSP1.csv', 'lung.fusion.GSP2.csv'
+##   and 'lung.fusion.primer.bed'.
+##
+## Column names (do not change):
+##  NM    - transcript RefSeq ID is required. 
+##  gene  - optional (FYI).
+##  exon  - if specified, only primers of specified exons
+##            will be in final output csv files (other exon
+##	      primers still designed, but output to
+##            '...all.eoxns.csv');
+##  sense - sense (for detection of 3' partner) or 
+##            antisense (for detection of 5' partner)
+##
+##  (Note: the example lists all exons and sense primers for NTRK1 
+##           simply for demonstration purpose)
+##
+NM	gene	exon	sense
+NM_004304	ALK	19	antisense
+NM_004304	ALK	20	antisense
+NM_004304	ALK	21	antisense
+NM_004304	ALK	22	antisense
+NM_020630	RET	all	antisense
+NM_002529	NTRK1	all	sense
+NM_002529	NTRK1	all	antisense
+NM_002944	ROS1	31	antisense
+NM_002944	ROS1	32	antisense
+NM_002944	ROS1	33	antisense
+NM_002944	ROS1	34	antisense
+NM_002944	ROS1	35	antisense
+NM_002944	ROS1	36	antisense
+NM_002944	ROS1	37	antisense
+NM_002046	GAPDH	6	antisense
+NM_001328	CTBP1	6	antisense

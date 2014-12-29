@@ -1,0 +1,51 @@
+###########################################################################
+Purpose:
+    To design primers for targeted cDNA seq for fusion detection 
+      or targeted gDNA seq for mutation (SNV, Indel, CNV) detection 
+      using anhcored multiplex PCR.
+
+Reference:
+   Zheng Z, et al. Anchored multiplex PCR for targeted next-generation sequencing.
+   Nat Med. 2014 (http://www.nature.com/nm/journal/v20/n12/full/nm.3729.html)
+
+Contact     : Zongli Zheng, The Iafrate Lab
+Date created: 2012-04-13
+
+1. Check out 'main.R' for useage.
+
+2. Required software, R library and data dependency
+
+ 1) Primer3 (http://primer3.sourceforge.net/primer3_manual.htm)
+ 2) BLAT (https://users.soe.ucsc.edu/~kent/src/)
+ 3) R libraries: BSgenome.Hsapiens.UCSC.hg19
+                SNPlocs.Hsapiens.dbSNP.20111119
+ 4) The dependency data (e.g. ~/dependency-AMP/)
+
+The dependecy data (e.g. in '~/dependency-AMP') should contain:
+
+  hg19.2bit                   - contains the complete hg19 Human Genome in the 2bit (Available from
+	                          http://hgdownload.cse.ucsc.edu/goldenPath/hg19/bigZips/hg19.2bit)
+
+  NGSadaptors_and_humanRep.fa - contains sequences used for filtering primers during primer3 design.
+				It cosists of:
+			        a) NGS adaptors (supplied by this pipeline 'NGSadaptors.fa')
+				b) Human repetitive seqeunce (available from
+				     http://www.girinst.org/server/RepBase/index.php, which
+			             requires registration [free for non-profit])
+			        To create, run:
+        			   cat NGSadaptors.fa humrep.fasta > 
+					/path/to/dependency/NGSadaptors_and_humanRep.fa
+
+  dbsnp/                      - dbSNP and clinically relevant SNPs from the 1000 Genomes Project 
+				  (20120626 Release). dbSNPs are split by chromosome and saved as
+				  snp.1, snp.2, ...snp.Y, such as:
+				 zzlion@tnaseq:~/dependency-AMP/dbsnp$ head -n2 snp.1
+					"V1" "V2" "V3" "V4" "V5"
+					"1" "1" 10583 "rs58108140" "G" "A"
+					"2" "1" 10611 "rs189107123" "C" "G"
+				(the complied dbsnp.tar.gz file will be uploaded to a public 
+				sever soon)
+
+## End
+
+

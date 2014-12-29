@@ -1,0 +1,43 @@
+##
+## Please read amp-primer.design.R for instruction.
+##
+
+## Eg. 1 - fusion
+Rscript ~/repo/AMP-primer-design/main.R \
+	assaytype=\"fusion\"  \
+        panel=\"lung.fusion\"  \
+        genelist=\"~/project-AMP/lung.fusion.genelist.txt\"  \
+        pjdir=\"~/project-AMP\"  \
+        depdir=\"~/dependency-AMP\"  \
+        ampdir=\"~/repo/AMP-primer-design\"  \
+        primer3path=\"~/primer3-2.3.5\"  \
+        blatdir=\"~/bin/x86_64\" \
+        keep_gfSvr=1 \
+        GSP1tag=\"GGATCTCGACGCTCTCCCT\"  \
+        GSP2tag=\"CCTCTCTATGGGCAGTCGGTGAT\"  \
+        ncpu=8  \
+        tempsize=90  \
+        NGSadaptors_and_humanRep=\"NGSadaptors_and_humanRep.fa\"
+
+
+
+## Eg. 2 - mutation
+Rscript ~/repo/AMP-primer-design/main.R \
+	assaytype=\"mutation\" \
+        panel=\"cancer.v1\"  \
+        genelist=\"~/project-AMP/cancer.v1.genelist.txt\"  \
+        pjdir=\"~/project-AMP\"  \
+        depdir=\"~/dependency-AMP\"  \
+        ampdir=\"~/repo/AMP-primer-design\"  \
+        primer3path=\"~/primer3-2.3.5\"  \
+        blatdir=\"~/bin/x86_64\" \
+        keep_gfSvr=1 \
+        GSP1tag=\"GGATCTCGACGCTCTCCCT\"  \
+        GSP2tag=\"CCTCTCTATGGGCAGTCGGTGAT\"  \
+        ncpu=32 \
+        tempsize=90  \
+        NGSadaptors_and_humanRep=\"NGSadaptors_and_humanRep.fa\" \
+        subExonSize=300 \
+	leadsize=3
+
+

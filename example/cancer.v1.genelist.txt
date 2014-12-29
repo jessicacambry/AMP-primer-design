@@ -1,0 +1,22 @@
+##
+## A gene list example for the mutation assay.
+## For final output, see files:
+##   'cancer.v1.GSP1.csv', 'cancer.v1.GSP2.csv'
+##   and 'cancer.v1.primer.bed'.
+##
+## Column names (do not change):
+##  NM    - transcript RefSeq ID is required. 
+##  gene  - optional (FYI).
+##  exon  - if specified, only primers of specified exons
+##            will be in final output csv files (other exon
+##	      primers still designed, but output to
+##            '...all.eoxns.csv');
+##
+NM	gene	exon
+NM_005228	EGFR	18
+NM_005228	EGFR	19
+NM_005228	EGFR	20
+NM_005228	EGFR	21
+NM_005228	EGFR	22
+NM_033360	KRAS	all
+NM_007300	BRCA1	all
